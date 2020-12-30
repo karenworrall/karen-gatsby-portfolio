@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
+import { Title } from '../components/Custom'
 
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
@@ -104,7 +105,7 @@ const PortfolioTag = ({ tag, handleClick, currentFilter }) =>
   }
   return (
     < div className="column is-half-mobile has-text-centered" >
-
+      {/* eslint-disable-next-line */}
       <div
         className="box is-flex is-clickable is-align-items-center is-justify-content-center"
         style={{ position: 'relative', height: '100%' }}
@@ -157,9 +158,7 @@ export const PortfolioPageTemplate = ({ title, tags, content, contentComponent, 
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="section">
-              <h2 className="title is-size-2 has-text-centered has-text-weight-bold is-bold-light is-family-secondary">
-                {title}
-              </h2>
+              <Title>{title}</Title>
               <PageContent className="content" content={content} />
               <div className="columns is-mobile is-multiline">
                 <AnimateSharedLayout>
@@ -169,7 +168,7 @@ export const PortfolioPageTemplate = ({ title, tags, content, contentComponent, 
                   ))}
                 </AnimateSharedLayout>
               </div>
-              <div className="columns is-multiple">
+              <div className="columns is-multiline">
                 <AnimateSharedLayout type="crossfade">
                   {portfolioItems.map((item, index) => (
                     <PortfolioItem

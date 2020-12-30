@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import { Subtitle, Title } from '../components/Custom'
 
 export const AboutPageTemplate = ({ title, content, contentComponent, image, education }) =>
 {
@@ -15,9 +16,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image, edu
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="section">
-              <h2 className="title is-size-2 has-text-centered has-text-weight-bold is-bold-light is-family-secondary">
-                {title}
-              </h2>
+              <Title>{title}</Title>
               <div className="columns">
                 <div className="column is-4">
                   <PreviewCompatibleImage imageInfo={image} />
@@ -40,7 +39,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image, edu
                 </div>
               </section>
 
-              <h3 className="subtitle is-size-3 has-text-weight-bold">Education</h3>
+              <Subtitle>Education</Subtitle>
               <p>I’m a big believer in constant personal development and honing your craft. Here’s a summary of my relevant education so far:</p>
               <ul>
                 {education.map(item => (

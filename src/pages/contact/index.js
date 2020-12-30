@@ -1,6 +1,7 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
 import Layout from '../../components/Layout'
+import { Title } from '../../components/Custom'
 
 function encode(data)
 {
@@ -45,7 +46,7 @@ export default class Index extends React.Component
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1 className="has-text-centered is-family-secondary">Contact Me</h1>
+              <Title>Contact Me</Title>
               <form
                 name="contact"
                 method="post"

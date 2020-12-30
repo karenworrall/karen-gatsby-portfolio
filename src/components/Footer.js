@@ -1,26 +1,53 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import copywriter from '../img/badge-copywriter.png'
+import editor from '../img/badge-editor.png'
+import proofreader from '../img/badge-proofreader.png'
 
-import logo from '../img/logo.svg'
-import facebook from '../img/social/facebook.svg'
-import instagram from '../img/social/instagram.svg'
-import twitter from '../img/social/twitter.svg'
-import vimeo from '../img/social/vimeo.svg'
+// import { Link } from 'gatsby'
 
-const Footer = class extends React.Component {
-  render() {
-    return (
-      <footer className="footer has-background-black has-text-white-ter">
-        <div className="content has-text-centered">
+// import logo from '../img/logo.svg'
+// import facebook from '../img/social/facebook.svg'
+// import instagram from '../img/social/instagram.svg'
+// import twitter from '../img/social/twitter.svg'
+// import vimeo from '../img/social/vimeo.svg'
+
+const Footer = () =>
+{
+
+  const badgeStyle = {
+    maxWidth: '150px',
+    padding: '0 20px'
+    // margin: '0 auto',
+    // display: 'block'
+  }
+
+
+  return (
+    <footer className="footer has-background-grey has-text-white-ter">
+      {/* <div className="content has-text-centered">
           <img
             src={logo}
             alt="Kaldi"
             style={{ width: '14em', height: '10em' }}
           />
-        </div>
-        <div className="content has-text-centered has-background-black has-text-white-ter">
-          <div className="container has-background-black has-text-white-ter">
-            <div style={{ maxWidth: '100vw' }} className="columns">
+        </div> */}
+      <div className="content ">
+        <div className="container">
+          <div className="is-flex is-flex-wrap-wrap is-justify-content-center mb-3">
+
+            <img style={badgeStyle} src={copywriter} alt="copywriter" />
+
+            <img style={badgeStyle} src={editor} alt="editor" />
+
+            <img style={badgeStyle} src={proofreader} alt="proofreader" />
+
+          </div>
+          <div className="is-flex is-flex-wrap-wrap is-justify-content-space-around">
+            <p>Copywright &#169; 2020 Karen Worrall</p>
+            <p>Website created by <a href='https://nickworrall.co.uk' target='blank' rel='noopener noreferrer'>Nick Worrall</a>
+            </p>
+          </div>
+          {/* <div style={{ maxWidth: '100vw' }} className="columns">
               <div className="column is-4">
                 <section className="menu">
                   <ul className="menu-list">
@@ -104,12 +131,12 @@ const Footer = class extends React.Component {
                   />
                 </a>
               </div>
-            </div>
-          </div>
+            </div> */}
         </div>
-      </footer>
-    )
-  }
+      </div>
+    </footer>
+  )
+
 }
 
 export default Footer

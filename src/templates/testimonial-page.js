@@ -5,6 +5,7 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Img from 'gatsby-image'
 import { motion } from 'framer-motion'
+import { Title } from '../components/Custom'
 
 const Testimonial = ({ testimonial }) =>
 {
@@ -60,11 +61,9 @@ export const TetsimonialPageTemplate = ({ title, content, contentComponent, test
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="section">
-              <h2 className="title is-size-2 has-text-centered has-text-weight-bold is-bold-light is-family-secondary">
-                {title}
-              </h2>
+              <Title>{title}</Title>
               <PageContent className="content" content={content} />
-              <motion.div className="columns is-multiple" variants={variants} initial="hidden" animate="show">
+              <motion.div className="columns is-multiline" variants={variants} initial="hidden" animate="show">
                 {testimonialItems.map((testimonial) => (
                   <motion.div variants={itemVariants} className="column is-half-tablet">
 
