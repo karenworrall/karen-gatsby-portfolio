@@ -10,6 +10,7 @@ backend:
 
 media_folder: static/img
 public_folder: /img
+site_url: https://karenworrall.netlify.app
 
 collections:
   - name: "blog"
