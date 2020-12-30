@@ -2,23 +2,28 @@ import React from 'react'
 import { navigate } from 'gatsby-link'
 import Layout from '../../components/Layout'
 
-function encode(data) {
+function encode(data)
+{
   return Object.keys(data)
     .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
 }
 
-export default class Index extends React.Component {
-  constructor(props) {
+export default class Index extends React.Component
+{
+  constructor(props)
+  {
     super(props)
     this.state = { isValidated: false }
   }
 
-  handleChange = (e) => {
+  handleChange = (e) =>
+  {
     this.setState({ [e.target.name]: e.target.value })
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = (e) =>
+  {
     e.preventDefault()
     const form = e.target
     fetch('/', {
@@ -33,13 +38,14 @@ export default class Index extends React.Component {
       .catch((error) => alert(error))
   }
 
-  render() {
+  render()
+  {
     return (
       <Layout>
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1>Contact</h1>
+              <h1 className="has-text-centered is-family-secondary">Contact Me</h1>
               <form
                 name="contact"
                 method="post"

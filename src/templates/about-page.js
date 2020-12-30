@@ -3,8 +3,10 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({ title, content, contentComponent, image, education }) =>
+{
   const PageContent = contentComponent || Content
 
   return (
@@ -13,10 +15,38 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+              <h2 className="title is-size-2 has-text-centered has-text-weight-bold is-bold-light is-family-secondary">
                 {title}
               </h2>
-              <PageContent className="content" content={content} />
+              <div className="columns">
+                <div className="column is-4">
+                  <PreviewCompatibleImage imageInfo={image} />
+                </div>
+                <div className="column is-8">
+                  <PageContent className="content" content={content} />
+                </div>
+              </div>
+              <section className="hero is-primary">
+                <div className="hero-body has-text-centered">
+                  <div className="container">
+                    <h1 className="title">
+                      Want to talk about a project?
+                    </h1>
+                    <h2 className="subtitle">
+                      Let's chat:
+                       <a href="mailto:info@karenworrall.co.uk" target="_blank" rel="noopener noreferrer">info@karenworrall.co.uk</a>
+                    </h2>
+                  </div>
+                </div>
+              </section>
+
+              <h3 className="subtitle is-size-3 has-text-weight-bold">Education</h3>
+              <p>I’m a big believer in constant personal development and honing your craft. Here’s a summary of my relevant education so far:</p>
+              <ul>
+                {education.map(item => (
+                  <li>{item.year} - {item.text}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
@@ -31,7 +61,8 @@ AboutPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
 }
 
-const AboutPage = ({ data }) => {
+const AboutPage = ({ data }) =>
+{
   const { markdownRemark: post } = data
 
   return (
@@ -40,6 +71,8 @@ const AboutPage = ({ data }) => {
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
+        image={post.frontmatter.image}
+        education={post.frontmatter.education}
       />
     </Layout>
   )
@@ -57,6 +90,17 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        education {
+          year
+          text
+        }
       }
     }
   }

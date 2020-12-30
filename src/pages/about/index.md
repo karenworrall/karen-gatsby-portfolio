@@ -1,19 +1,26 @@
 ---
 templateKey: 'about-page'
 path: /about
-title: About our values
+title: About
+image: /img/KarenWorrallAbout.jpg
+education:
+  - year: 2020
+    text: >
+      Diploma in Copywriting (Distinction) from the College of Media and Publishing (CMP)
+  - year: 2020
+    text: >
+      Diploma in Proofreading and Editing (Distinction) from CMP
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+## Thank you for checking out my portfolio.
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+My name is Karen. I’m a copywriter, content writer and travel junkie living in Edinburgh, Scotland.
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+A few of the brands I’ve worked with since 2017 include: National Geographic Traveller (UK), Holland America Line, ASTA Worldwide Destinations Guide, ABTA, Postcards, and Flight Centre.
 
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
+Before discovering the joys of content and copywriting: I spent 15 years working on cruise ships in entertainment and then sales and marketing selling cruises; managed entertainment and sang in Spain; taught English in Italy; and backpacked around the US.
 
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+I created a website about travel by cruise ship giving tips on what to do in ports, and advice on travel and ship life CruiseShipKaren.com
+
+Words have always been my thing, from speaking them while hosting and managing entertainment teams, singing them as a vocalist, teaching them while English teaching and learning other languages, to writing them to inform, educate, entertain, inspire and persuade.
+
+I have you covered for any type of content, weaving words to spice up the narrative of your product or story, researching thoroughly and creating the message you need.
