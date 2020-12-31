@@ -25,7 +25,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image, edu
                   <PageContent className="content" content={content} />
                 </div>
               </div>
-              <section className="hero is-primary">
+              <section className="hero">
                 <div className="hero-body has-text-centered">
                   <div className="container">
                     <h1 className="title">
@@ -39,13 +39,15 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image, edu
                 </div>
               </section>
 
-              <Subtitle>Education</Subtitle>
-              <p>I’m a big believer in constant personal development and honing your craft. Here’s a summary of my relevant education so far:</p>
-              <ul>
-                {education.map(item => (
-                  <li>{item.year} - {item.text}</li>
-                ))}
-              </ul>
+              <div className="content">
+                <Subtitle>Education</Subtitle>
+                <p>I’m a big believer in constant personal development and honing your craft. Here’s a summary of my relevant education so far:</p>
+                <ul>
+                  {education.map(item => (
+                    <li>{item.year} - {item.text}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>

@@ -1,10 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import BackgroundImage from 'gatsby-background-image'
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import { Subtitle } from '../components/Custom'
 
 export const IndexPageTemplate = ({
   image,
@@ -14,14 +17,38 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
+  clientLogos,
 }) => (
   <div>
-    <div
+    <BackgroundImage
+      className="hero is-large"
+      style={{ backgroundAttachment: 'fixed' }}
+      fluid={image.childImageSharp.fluid}
+    >
+      <div className="hero-body has-text-white is-family-secondary">
+
+        <div className="container is-max-desktop has-text-centered">
+          <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen">
+            Karen Worrall
+          </h1>
+          <h3 className=" is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
+
+            I write engaging copy that educates, entertains, connects, persuades and sells—whatever your project needs.
+          </h3>
+          <Link to="/portfolio">
+            <button className="button is-link has-text-black mt-4">
+              See my work
+            </button>
+          </Link>
+        </div>
+      </div>
+
+    </BackgroundImage>
+    {/* <div
       className="full-width-image margin-top-0"
       style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
+        backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          })`,
         backgroundPosition: `top left`,
         backgroundAttachment: `fixed`,
       }}
@@ -63,10 +90,19 @@ export const IndexPageTemplate = ({
           {subheading}
         </h3>
       </div>
-    </div>
+    </div> */}
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
+          <Subtitle>Featured In</Subtitle>
+          <div className="columns is-multiline is-mobile">
+            {clientLogos.map((logo, index) => (
+              <div className="column is-half-mobile is-one-quarter-tablet">
+                <PreviewCompatibleImage key={index} imageInfo={logo.image} />
+              </div>
+            ))}
+          </div>
+
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="content">
@@ -126,7 +162,8 @@ IndexPageTemplate.propTypes = {
   }),
 }
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data }) =>
+{
   const { frontmatter } = data.markdownRemark
 
   return (
@@ -139,6 +176,7 @@ const IndexPage = ({ data }) => {
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
+        clientLogos={frontmatter.clientLogos}
       />
     </Layout>
   )
@@ -173,6 +211,15 @@ export const pageQuery = graphql`
           description
         }
         description
+        clientLogos {
+          image{
+            childImageSharp {
+              fluid{
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
         intro {
           blurbs {
             image {

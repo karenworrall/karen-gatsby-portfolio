@@ -1,7 +1,9 @@
+import { graphql, StaticQuery } from 'gatsby'
 import React from 'react'
-import copywriter from '../img/badge-copywriter.png'
-import editor from '../img/badge-editor.png'
-import proofreader from '../img/badge-proofreader.png'
+// import copywriter from '../img/badge-copywriter.png'
+// import editor from '../img/badge-editor.png'
+// import proofreader from '../img/badge-proofreader.png'
+import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 // import { Link } from 'gatsby'
 
@@ -11,16 +13,17 @@ import proofreader from '../img/badge-proofreader.png'
 // import twitter from '../img/social/twitter.svg'
 // import vimeo from '../img/social/vimeo.svg'
 
-const Footer = () =>
+const Footer = ({ data }) =>
 {
 
   const badgeStyle = {
-    maxWidth: '150px',
+    width: '200px',
     padding: '0 20px'
     // margin: '0 auto',
     // display: 'block'
   }
-
+  console.log(data)
+  const blurbs = data.markdownRemark.frontmatter.intro.blurbs
 
   return (
     <footer className="footer has-background-grey has-text-white-ter">
@@ -34,12 +37,18 @@ const Footer = () =>
       <div className="content ">
         <div className="container">
           <div className="is-flex is-flex-wrap-wrap is-justify-content-center mb-3">
+            {blurbs.map((blurb, index) => (
+              <div style={badgeStyle}>
+                <PreviewCompatibleImage key={index} imageInfo={blurb.image} />
 
-            <img style={badgeStyle} src={copywriter} alt="copywriter" />
+              </div>
+            ))}
+
+            {/* <img style={badgeStyle} src={copywriter} alt="copywriter" />
 
             <img style={badgeStyle} src={editor} alt="editor" />
 
-            <img style={badgeStyle} src={proofreader} alt="proofreader" />
+            <img style={badgeStyle} src={proofreader} alt="proofreader" /> */}
 
           </div>
           <div className="is-flex is-flex-wrap-wrap is-justify-content-space-around">
@@ -139,4 +148,29 @@ const Footer = () =>
 
 }
 
-export default Footer
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query FooterQuery {
+        markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
+          frontmatter {
+            intro {
+              blurbs {
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 400, quality: 60){
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => <Footer data={data} />}
+  />
+)
+
+

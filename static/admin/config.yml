@@ -62,6 +62,12 @@ collections:
             }
           - { label: Description, name: description, widget: string }
           - {
+              label: Client Logos,
+              name: clientLogos,
+              widget: list,
+              fields: [{ label: Image, name: image, widget: image }],
+            }
+          - {
               label: Intro,
               name: intro,
               widget: object,
