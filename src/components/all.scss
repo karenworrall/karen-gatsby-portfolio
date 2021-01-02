@@ -1,35 +1,27 @@
-@import "~bulma/sass/utilities/initial-variables";
-@import url('https://fonts.googleapis.com/css2?family=Trocchi&display=swap');
-// Config vars
-// Kaldi logo brand color: #FD461E
+@import "./variables.scss";
 
-$sea: #c8f0e6;
-$magic-mint:#AAFFE5;
-$sea-invert: rgba(3, 3, 3, 0.7);
-$eerie-black: #201E1F;
-$black-coffee: #38302E;
-$kobi: #D2A1B8;
-$steel-teal: #6E8387;
+.switch {
+  width: 160px;
+  height: 100px;
+  background-color: $primary;
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 50px;
+  padding: 10px;
+  cursor: pointer;
+}
 
-$primary: $magic-mint;
-$primary-invert: $sea-invert;
-$link: $kobi;
-$body-color: $black-coffee;
-$dark: $black-coffee;
-$black: $eerie-black;
+.switch[data-isOn="true"] {
+  justify-content: flex-end;
+}
 
+.switch-handle {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 40px;
+}
 
-$navbar-height: 5rem;
-$navbar-item-img-max-height: 4rem;
-$navbar-background-color: $primary;
-
-$footer-padding: 3rem 1.5rem 2rem;
-
-$box-padding: 0.5rem;
-
-$modal-content-width: 800px;
-
-$family-secondary: 'Trocchi', serif;
 
 .navbar .navbar-menu {
   box-shadow: none !important;
@@ -39,6 +31,31 @@ $family-secondary: 'Trocchi', serif;
   cursor: pointer;
 }
 
+
+.back-to-top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.has-background-black-opacity{
+  background-color: rgba($black-coffee, 0.69) !important;
+  box-shadow: 0 0 20px 20px rgba($black-coffee,0.7) !important;
+}
+
+
+.circular-icon {
+    font-size: xxx-large;
+    color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .content .taglist {
   list-style: none;
@@ -180,5 +197,43 @@ $menu-label-color: $white-ter;
     text-align: center;
     max-width: 70%;
     margin: 0 0 1em;
+  }
+}
+
+@include until($desktop){
+  .navbar-brand{
+    z-index: 2;
+    position: relative;
+  }
+
+
+  .navbar-menu{
+    display: block;
+    z-index: 1;
+    background-color: $primary;
+    padding: 0 10vw;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    transform: translateY(-100vh);
+    transition: transform .4s ease-in-out .4s;
+    pointer-events: none;
+    > *{
+      opacity: 0;
+      transition: opacity .4s ease-in-out;
+    }
+  }
+
+
+  .navbar-menu.is-active{
+    transform: none;
+    transition: transform .4s ease-in-out;
+    pointer-events: auto;
+    > *{
+      opacity: 1;
+      transition: opacity .4s ease-in-out .4s;
+    }
   }
 }

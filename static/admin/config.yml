@@ -47,7 +47,9 @@ collections:
               default: "index-page",
             }
           - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
+          - { label: Hero Image1, name: heroImage1, widget: image }
+          - { label: Hero Image2, name: heroImage2, widget: image }
+          - { label: Hero Image3, name: heroImage3, widget: image }
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - {
@@ -169,6 +171,28 @@ collections:
                 [
                   { label: Title, name: title, widget: string },
                   { label: Description, name: description, widget: text },
+                ],
+            }
+          - {
+              label: Pricing Items,
+              name: pricingItems,
+              widget: list,
+              fields:
+                [
+                  { label: Plan, name: plan, widget: string },
+                  { label: Dollars, name: dollars, widget: string },
+                  { label: Pounds, name: pounds, widget: string },
+                  { label: Items, name: items, widget: list },
+                ],
+            }
+          - {
+              label: FAQs,
+              name: faqs,
+              widget: list,
+              fields:
+                [
+                  { label: Header, name: header, widget: string },
+                  { label: Content, name: content, widget: markdown },
                 ],
             }
       - file: "src/pages/portfolio/index.md"

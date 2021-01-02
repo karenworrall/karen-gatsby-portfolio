@@ -4,6 +4,8 @@ import React from 'react'
 // import editor from '../img/badge-editor.png'
 // import proofreader from '../img/badge-proofreader.png'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import scrollTo from 'gatsby-plugin-smoothscroll';
+import { FaAngleDoubleUp } from 'react-icons/fa'
 
 // import { Link } from 'gatsby'
 
@@ -22,11 +24,13 @@ const Footer = ({ data }) =>
     // margin: '0 auto',
     // display: 'block'
   }
-  console.log(data)
   const blurbs = data.markdownRemark.frontmatter.intro.blurbs
 
   return (
-    <footer className="footer has-background-grey has-text-white-ter">
+    <footer className="footer has-background-light has-text-dark is-relative">
+      <button className="back-to-top box has-background-light has-text-dark" onClick={() => scrollTo('#top')} style={{ cursor: 'pointer' }}>
+        <FaAngleDoubleUp />
+      </button>
       {/* <div className="content has-text-centered">
           <img
             src={logo}
@@ -38,7 +42,7 @@ const Footer = ({ data }) =>
         <div className="container">
           <div className="is-flex is-flex-wrap-wrap is-justify-content-center mb-3">
             {blurbs.map((blurb, index) => (
-              <div style={badgeStyle}>
+              <div key={index} style={badgeStyle}>
                 <PreviewCompatibleImage key={index} imageInfo={blurb.image} />
 
               </div>

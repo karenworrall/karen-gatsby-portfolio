@@ -10,6 +10,7 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 const PortfolioItem = ({ active, item, handleClick, index }) =>
 {
+
   return (
 
     <AnimatePresence >
@@ -45,6 +46,8 @@ const PortfolioItem = ({ active, item, handleClick, index }) =>
 
 const PortfolioModal = ({ setModalActive, activePortfolio }) =>
 {
+
+
   return (
 
     <div className={"modal is-active"}>
@@ -84,7 +87,7 @@ const PortfolioModal = ({ setModalActive, activePortfolio }) =>
             {/* <span className="icon">
               <i className="fas fa-angle-right"></i>
             </span> */}
-            <a target="blank" rel="noopener noreferrer" href={activePortfolio.link}>
+            <a target="blank" rel="noopener noreferrer" href={activePortfolio.link === null ? `localhost:8000/${activePortfolio.file.publicURL}` : activePortfolio.link}>
               <button className="button is-success">Read More</button>
             </a>
           </div>
@@ -104,7 +107,7 @@ const PortfolioTag = ({ tag, handleClick, currentFilter }) =>
     damping: 50
   }
   return (
-    < div className="column is-half-mobile has-text-centered" >
+    < div className="column is-half-mobile is-one-quarter-tablet has-text-centered" >
       {/* eslint-disable-next-line */}
       <div
         className="box is-flex is-clickable is-align-items-center is-justify-content-center"
@@ -240,6 +243,9 @@ export const portfolioPageQuery = graphql`
           longDescription
           tags
           link
+          file {
+            publicURL
+          }
           mainImage {
             childImageSharp {
               fluid{

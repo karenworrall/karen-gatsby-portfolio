@@ -5,10 +5,52 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import { motion } from 'framer-motion'
 import { Subtitle, Title } from '../components/Custom'
+import Accordian from '../components/Accordian'
 // import bulmaCollapsible from '@creativebulma/bulma-collapsible';
+import Pricing from '../components/Pricing'
 
-export const ServicesPageTemplate = ({ title, content, contentComponent, serviceItems }) =>
+export const ServicesPageTemplate = ({ title, content, contentComponent, serviceItems, pricingItems, faqs }) =>
 {
+
+  console.log(faqs[0].content)
+  // const accordionData = [
+  //   {
+  //     header: "hajsdhajksda",
+  //     content: "gahsdghkfjgahjkdghfajgdfhkgahdsjkf  hajkdhsjfkla"
+  //   },
+  //   {
+  //     header: "hajsdhasdasdjaksldajksda",
+  //     content: "gahsdghkfjgahjkdghfajgdfhkgahdsjkf  hajkdhsjfkla"
+  //   },
+  //   {
+  //     header: "asdajksdlakdal",
+  //     content: "gahsdghkfjgahjkdghfajgdfhkgahdsjkf  hajkdhsjfkla"
+  //   }
+
+  // ]
+
+  // const pricingData = [
+  //   {
+  //     plan: "Proofreading (Level 1)",
+  //     dollars: "33 per 1000 words",
+  //     pounds: "25 per 1000 words",
+  //     items: [
+  //       "Spelling, grammer and punctuation spelling",
+  //       "Consistent, understable and accurate"
+  //     ]
+  //   },
+  //   {
+  //     plan: "Copy Editing (Level 2)",
+  //     dollars: "33 per 500 words",
+  //     pounds: "25 per 500 words",
+  //     items: [
+  //       "All items on Level 1 editing",
+  //       "Shaping the story",
+  //       "Changes to the structure"
+  //     ]
+  //   }
+  // ]
+
   const PageContent = contentComponent || Content
 
   const variants = {
@@ -62,8 +104,10 @@ export const ServicesPageTemplate = ({ title, content, contentComponent, service
                   </motion.div>
                 ))}
               </motion.div>
+              <Subtitle>Pricing</Subtitle>
+              <Pricing data={pricingItems} />
               <Subtitle>FAQs</Subtitle>
-
+              <Accordian data={faqs} />
             </div>
           </div>
         </div>
@@ -89,6 +133,8 @@ const ServicesPage = ({ data }) =>
         content={post.html}
         title={post.frontmatter.title}
         serviceItems={post.frontmatter.serviceItems}
+        pricingItems={post.frontmatter.pricingItems}
+        faqs={post.frontmatter.faqs}
       />
     </Layout>
   )
@@ -109,6 +155,16 @@ export const servicesPageQuery = graphql`
         serviceItems {
           title
           description
+        }
+        pricingItems {
+          plan
+          dollars
+          pounds
+          items
+        }
+        faqs {
+          header
+          content
         }
       }
     }

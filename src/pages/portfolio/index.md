@@ -40,18 +40,16 @@ portfolioItems:
     mainImage: /img/Salzburgerland_Diary.jpg
     thumbImage: /img/Salzburgerland_Diary_thumb.jpg
     tags:
-
     - Nat Geo Traveller
     - Content Writing
     shortDescription: National Geographic Traveller (UK)
-    link: ''
+    link: /img/Salzburgerland_Diary.pdf
     longDescription: 'A guide to some of the best cultural and quirky annual festivals in the region
       around Salzburg in Austria. For the October 2018 special edition on Salzburgerland. '
   - title: 'Taj Exotica: Tropical bliss in the Maldives'
     mainImage: /img/Taj_Exotica.jpg
     thumbImage: /img/Taj_Exotica_thumb.jpg
     tags:
-
     - Nat Geo Traveller
     - Content Writing
     shortDescription: National Geographic Traveller (UK)
@@ -66,7 +64,7 @@ portfolioItems:
     - Postcards
     - Content Writing
     shortDescription: Postcards (Trade magazine)
-    link: ''
+    file: /img/Ancient_Luxor.pdf
     longDescription: 'Two-page spread with illustrations touring Luxor’s most important ancient
       sites. For Postcards travel trade magazine, sent to over 50,000 travel professionals
       around North America. '
@@ -78,7 +76,7 @@ portfolioItems:
     shortDescription: Flight Centre
     mainImage: /img/Iconic_Australia.jpg
     thumbImage: /img/Iconic_Australia_thumb.jpg
-    link: ''
+    file: /img/Iconic_Australia.jpg
     longDescription: An advertorial I wrote for Flight Centre that was published in National Geographic
       Traveller (UK) September 2018 edition. This was advertising the Iconic Victoria
       and Great Ocean Road itinerary, bookable through Flight Centre, with details on
@@ -103,7 +101,7 @@ portfolioItems:
     shortDescription: ASTA Worldwide Destination Guide 2020
     mainImage: /img/Israel_Food.jpg
     thumbImage: /img/Israel_Food_thumb.jpg
-    link: ''
+    file: /img/Israel_Food.jpg
     longDescription: 'An overview five major aspects of Israel’s Mediterranean meets Middle Eastern
       cuisine for the American Society of Travel Advisor’s annual destination guide. '
   - title: 'Kenya: History and Culture'
@@ -114,7 +112,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2020
-    link: ''
+    file: /img/Kenya_History.jpg
     longDescription: 'An overview of some of the most important aspects of Kenya’s turbulent history
       and rich culture for the American Society of Travel Advisor’s annual destination
       guide. '
@@ -139,7 +137,7 @@ portfolioItems:
     - Content Writing
     - Others
     shortDescription: ABTA Country By Country Guide
-    link: ''
+    file: /img/Hague_Guide.pdf
     longDescription: 'A guide of the top five things to do, see, eat and drink in the refined capital
       of the Netherlands. For the Association of British Travel Agents Country by Country
       annual destination guide. '
@@ -151,7 +149,7 @@ portfolioItems:
     - Postcards
     - Content Writing
     shortDescription: Postcards (Trade magazine)
-    link: ''
+    file: /img/blue_hole.pdf
     longDescription: 'Feature on natural phenomenon the Blue Hole in Belize. For Postcards travel
       trade magazine, sent to over 50,000 travel professionals around North America. '
   - title: 'Destination: Russia'
@@ -162,7 +160,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2020
-    link: ''
+    file: /img/Russia_Destination.jpg
     longDescription: An overview to some of the best cities, landscapes and architecture to see
       in this expansive northern European country so huge it spans 11 times zones, for
       the American Society of Travel Advisor’s annual destination guide.
@@ -174,7 +172,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2020
-    link: ''
+    file: /img/Mombasa_Guide.jpg
     longDescription: 'An overview of some of the best things about Kenya’s melting pot and gastronomic
       hub second city Mombasa for the American Society of Travel Advisor’s annual destination
       guide. '
@@ -198,7 +196,7 @@ portfolioItems:
     - Postcards
     - Content Writing
     shortDescription: Postcards (Trade magazine)
-    link: ''
+    file: /img/Arabian_Gems.jpg
     longDescription: 'Two-page photo spread touting the highlights of Arabian gem cities of Dubai
       and Abu Dhabi. For Postcards travel trade magazine, sent to over 50,000 travel
       professionals around North America. '
@@ -210,7 +208,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2020
-    link: ''
+    file: /img/Dubrovnik_Guide.jpg
     longDescription: 'An overview of some of the best things about beautiful Croatian city Dubrovnik
       for the American Society of Travel Advisor’s annual destination guide. '
   - title: Oman’s adrenaline-inducing activities
@@ -233,7 +231,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2020
-    link: ''
+    file: /img/London_History.jpg
     longDescription: 'An overview of London’s long history from its beginnings in the bronze age
       through to Victorian era and beyond, for the American Society of Travel Advisor’s
       annual destination guide. '
@@ -245,7 +243,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2020
-    link: ''
+    file: /img/Jamaica_Beaches.jpg
     longDescription: 'An overview of the five finest beaches in Jamaica, focusing on different
       areas of the island, for the American Society of Travel Advisor’s annual destination
       guide. '
@@ -257,7 +255,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2020
-    link: ''
+    file: /img/Israel_Outdoor.jpg
     longDescription: 'An overview of the best outdoor activities in Israel, utilizing the country’s
       unique landscape, for the American Society of Travel Advisor’s annual destination
       guide. '
@@ -280,7 +278,7 @@ portfolioItems:
     - Nat Geo Traveller
     - Content Writing
     shortDescription: National Geographic Traveller (UK)
-    link: ''
+    file: /img/Christmas_Treats.pdf
     longDescription: 'A guide to some of the most delicious treats to eat and drink available in
       Christmas markets in Salzburger. For the October 2018 special edition on Salzburgerland. '
   - title: 'Destination: Jerusalem'
@@ -291,7 +289,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2019
-    link: ''
+    file: /img/Jerusalem_Destination.jpg
     longDescription: A guide to the important historical, religious and cultural highlights of
       Israel’s biblical capital city. For the American Society of Travel Advisor’s annual
       destination guide.
@@ -303,7 +301,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2020
-    link: ''
+    file: /img/Italy_Food.jpg
     longDescription: 'An overview five major aspects of gastronomic king Italy’s best foods by
       region, for the American Society of Travel Advisor’s annual destination guide. '
   - title: 'Five Minute Guide: Moscow'
@@ -314,7 +312,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2020
-    link: ''
+    file: /img/Moscow_Guide.jpg
     longDescription: 'An overview of some of the best things about Russia’s political, historical
       and cultural capital city Moscow for the American Society of Travel Advisor’s
       annual destination guide. '
@@ -337,7 +335,7 @@ portfolioItems:
     - Postcards
     - Content Writing
     shortDescription: Postcards (Trade magazine)
-    link: ''
+    file: /img/On_Safari.pdf
     longDescription: 'Two-page spread on tips on what to take on safari. For Postcards travel trade
       magazine, sent to over 50,000 travel professionals around North America. '
   - title: Where To Stay In Venice
@@ -386,7 +384,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2020
-    link: ''
+    file: /img/London_Markets.jpg
     longDescription: An overview of the top five of London’s many markets, covering historical,
       quirky, fashion and food, for the American Society of Travel Advisor’s annual
       destination guide.
@@ -398,7 +396,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2020
-    link: ''
+    file: /img/Jamaica_Destination.jpg
     longDescription: 'An overview of some of the best things about Jamaica and Jamaican culture
       for the American Society of Travel Advisor’s annual destination guide. '
   - title: 22 of the Top Things to do in London
@@ -433,7 +431,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2020
-    link: ''
+    file: /img/Sint_Eustatius_Destination.jpg
     longDescription: A guide to the tiny, charming island of Sint Eustatius in the Caribbean and
       its wonderful festivals, food and nature, for the American Society of Travel Advisor’s
       annual destination guide.
@@ -445,7 +443,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2020
-    link: ''
+    file: /img/Okrug_Destination.jpg
     longDescription: 'A guide to the beautiful medieval town of Okrug on Ciovo Island off the Dalmation
       Coast in Croatia, for the American Society of Travel Advisor’s annual destination
       guide. '
@@ -457,7 +455,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2020
-    link: ''
+    file: /img/Osijek_Destination.jpg
     longDescription: 'A guide to the beautiful baroque-designed town of Osijek in the Slavonia
       Baranja region of Croatia, for the American Society of Travel Advisor’s annual
       destination guide. '
@@ -481,7 +479,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2020
-    link: ''
+    file: /img/Croatia_Food.jpg
     longDescription: 'An overview of five major aspects of Croatia’s best food for the American
       Society of Travel Advisor’s annual destination guide. '
   - title: 24 of the Best Things to do in Venice
@@ -504,7 +502,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2020
-    link: ''
+    file: /img/Portugal_Destination.jpg
     longDescription: An overview to some of the best things to see, do, and eat in the Western
       European country of Portugal, for the American Society of Travel Advisor’s annual
       destination guide.
@@ -528,7 +526,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2020
-    link: ''
+    file: /img/Israel_Beaches.jpg
     longDescription: 'An overview of the five finest beaches in Israel, from the Dead Sea to Red
       Sea to Mediterranean Sea, for the American Society of Travel Advisor’s annual
       destination guide. '
@@ -540,7 +538,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2020
-    link: ''
+    file: /img/Italy_Outdoor.jpg
     longDescription: 'An overview of the best outdoor activities in Italy, utilizing the country’s
       varied landscape, for the American Society of Travel Advisor’s annual destination
       guide. '
@@ -552,7 +550,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2020
-    link: ''
+    file: /img/Kenya_Outdoor.jpg
     longDescription: 'An overview of the best outdoor activities in Kenya, utilizing the country’s
       stunning landscape, for the American Society of Travel Advisor’s annual destination
       guide. '
@@ -564,7 +562,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2020
-    link: ''
+    file: /img/Denmark_Highlights.jpg
     longDescription: 'An overview of some of the best things about Denmark and Danish culture for
       the American Society of Travel Advisor’s annual destination guide. '
   - title: 'Destination: Quebec'
@@ -575,7 +573,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2019
-    link: ''
+    file: /img/Quebec_Destination.jpg
     longDescription: 'A guide to the very French, European fairy tale city capital of Quebec Province
       in Canada. For the American Society of Travel Advisors annual destination guide. '
   - title: 'Italy: Art and Culture'
@@ -586,7 +584,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2020
-    link: ''
+    file: /img/Italy_Art.jpg
     longDescription: An overview of some of the finest art in Italy and where you can find it,
       for the American Society of Travel Advisor’s annual destination guide.
   - title: 'Destination: Azores'
@@ -597,7 +595,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2020
-    link: ''
+    file: /img/Azores_Destination.jpg
     longDescription: A guide to the seven islands, unique terrain and adventures available in the
       Mid-Atlantic island group belonging to Portugal, the Azores. For the American
       Society of Travel Advisor’s annual destination guide.
@@ -609,7 +607,7 @@ portfolioItems:
     - ASTA
     - Content Writing
     shortDescription: ASTA Worldwide Destination Guide 2020
-    link: ''
+    file: /img/Zagreb_Destination.jpg
     longDescription: A guide to the nature, nightlife, history and arts of Croatia’s capital city,
       for the American Society of Travel Advisor’s annual destination guide.
   - title: The Complete Venice Itinerary
@@ -645,7 +643,7 @@ portfolioItems:
     - Content Writing
     - Others
     shortDescription: Holland America Line
-    link: ''
+    file: /img/HAL_Legendary_Voyages.pdf
     longDescription: An advertising feature for marketing flyers sent out to guests on a HAL ship
       to help sell some of Holland America Line's longer, legendary voyages. Featuring
       copy of highlights of cruises in Polynesia, Australia, the Amazon and the Voyage

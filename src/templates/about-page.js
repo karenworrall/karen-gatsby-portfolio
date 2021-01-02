@@ -33,7 +33,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image, edu
                     </h1>
                     <h2 className="subtitle">
                       Let's chat:
-                       <a href="mailto:info@karenworrall.co.uk" target="_blank" rel="noopener noreferrer">info@karenworrall.co.uk</a>
+                       <a href="mailto:info@karenworrall.co.uk" target="_blank" rel="noopener noreferrer"> info@karenworrall.co.uk</a>
                     </h2>
                   </div>
                 </div>

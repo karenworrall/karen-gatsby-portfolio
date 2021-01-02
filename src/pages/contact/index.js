@@ -94,6 +94,34 @@ export default class Index extends React.Component
                   </div>
                 </div>
                 <div className="field">
+                  <label className="label" htmlFor={'writingType'}>
+                    I am intrested in
+                  </label>
+                  <div className="control">
+                    <div
+                      className="select"
+                      name={'writingType'}
+                      id={'writingType'}
+                      onChange={this.handleChange}
+                    >
+                      <select>
+                        <option>Copywriting</option>
+                        <option>Content Writing</option>
+                        <option>Editing</option>
+                        <option>Not sure</option>
+                      </select>
+                    </div>
+                    {/* <input
+                      className="input"
+                      type={'writingType'}
+                      name={'writingType'}
+                      onChange={this.handleChange}
+                      id={'writingType'}
+                      required={true}
+                    /> */}
+                  </div>
+                </div>
+                <div className="field">
                   <label className="label" htmlFor={'message'}>
                     Message
                   </label>

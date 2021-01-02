@@ -59,6 +59,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-smoothscroll`,
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
